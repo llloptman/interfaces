@@ -24,20 +24,11 @@ class TicketManagerFewElementsTest {
 
     @Test
     void findByAirportsShouldSortDesc() {
-        TicketInfo[] actual = manager.findByAirports("MSK","SPB");
-        TicketInfo[] expected = new TicketInfo[3];
-        expected[0] = ticketMskkSpb;
-        expected[1] = ticketMskSpb2;
-        expected[2] = ticketMskSpb1;
-        assertArrayEquals(expected,actual);
-    }
-
-    @Test
-    void findByAirportsShouldSortDesc2() {
-        TicketInfo[] actual = manager.findByAirports("MSK","SPB");
+        TicketInfo[] actual = manager.findByAirports("MSK", "SPB");
         TicketInfo[] expected = new TicketInfo[2];
         expected[0] = ticketMskSpb2;
         expected[1] = ticketMskSpb1;
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
     }
+
 }
