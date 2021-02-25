@@ -1,8 +1,12 @@
 package ru.netology.manager;
 
+import ru.netology.comparators.TicketByTimeInAir;
 import ru.netology.domain.TicketInfo;
 import ru.netology.repository.TicketRepository;
 
+
+import java.util.Arrays;
+import java.util.Comparator;
 
 import static java.util.Arrays.*;
 
@@ -29,5 +33,9 @@ public class TicketManager {
         return result;
     }
 
-
+    public TicketInfo[] findAll(String from, String to, Comparator<TicketInfo> comparator){
+        TicketInfo[] result = findByAirports(from,to);
+        sort(result,comparator);
+        return result;
+    }
 }
