@@ -13,9 +13,7 @@ class TicketManagerOneElementTest {
     TicketRepository repository = new TicketRepository();
     TicketManager manager = new TicketManager(repository);
     TicketByTimeInAir comporator = new TicketByTimeInAir();
-    TicketInfo ticketMskSpb1 = new TicketInfo(1, 110, "MSK", "SPB", 120);
     TicketInfo ticketMskSpb2 = new TicketInfo(2, 101, "MSK", "SPB", 120);
-    TicketInfo ticketMskkSpb = new TicketInfo(3, 10, "MSKK", "SPB", 120);
 
     @BeforeEach
     public void setUp() {
